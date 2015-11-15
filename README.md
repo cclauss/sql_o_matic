@@ -14,7 +14,7 @@ and len(TableInfo.data) will equal the number of rows in that table.
 * open an sqlite database
 * create an OrderedDict of TableInfo namedtuples, one for each database table
    * `table_name` is converted to CamelCase, removing all underscores (_)
-   * `key_col_name` is the name of column that is unique across all rows
+   * `key_col_name` is the name of a column whose value is unique across all rows
    * `data` is a dict if key_col_name else a list
 
 Yes, I have read [PEP 249 FAQ](https://www.python.org/dev/peps/pep-0249/#frequently-asked-questions) but I do not agree with it.  ;-)
