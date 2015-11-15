@@ -16,13 +16,14 @@ and len(TableInfo.data) will equal the number of rows in that table.
 
 * open an sqlite database
 * create a dict of TableInfo namedtuples, one for each database table
-   table_name is converted to CamelCase, removing all underscores (_)
-   key_col_name is the name of column that is unique across all rows
-   data is a list if key_col_name is None else a dict
+   * `table_name` is converted to CamelCase, removing all underscores (_)
+   * `key_col_name` is the name of column that is unique across all rows
+   * `data` is a list if key_col_name is None else a dict
 
 Yes, I have read [PEP 249 FAQ](https://www.python.org/dev/peps/pep-0249/#frequently-asked-questions) but I do not agree with it.  ;-)
-    * bullet 1: call `str.lower()` on the column name to be certain
-    * bullet 2: all sql statements executed here are plain vanilla
+
+* bullet 1: call `str.lower()` on the column name to be certain
+* bullet 2: all sql statements executed here are plain vanilla
 
 
 ```
