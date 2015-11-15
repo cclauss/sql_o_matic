@@ -6,7 +6,7 @@ Python script that copies each table of an sqlite database into a list or dict
 TableInfo = collections.namedtuple('TableInfo', 'table_name key_col_name data')
 ```
 
-It create an OrderedDict of TableInfo records, one for each table in the
+It creates an OrderedDict of TableInfo records, one for each table in the
 sqlite database.  TableInfo.data will contain a list or (if possible) a
 dict of namedtuples which match the column names of the database table
 and len(TableInfo.data) will equal the number of rows in that table.
@@ -22,7 +22,7 @@ Yes, I have read [PEP 249 FAQ](https://www.python.org/dev/peps/pep-0249/#frequen
 * bullet 1: call `str.lower()` on the column name to be certain
 * bullet 2: all sql statements executed here are plain vanilla
 
-#Output
+##Output
 
 ```
 AreaMetadata : TableInfo(table_name=u'AreaMetadata', key_col_name='json_value', data='10 rows')
