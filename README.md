@@ -12,7 +12,7 @@ dict of namedtuples which match the column names of the database table
 and len(TableInfo.data) will equal the number of rows in that table.
 
 * open an sqlite database
-* create a dict of TableInfo namedtuples, one for each database table
+* create an OrderedDict of TableInfo namedtuples, one for each database table
    * `table_name` is converted to CamelCase, removing all underscores (_)
    * `key_col_name` is the name of column that is unique across all rows
    * `data` is a dict if key_col_name else a list
@@ -22,7 +22,7 @@ Yes, I have read [PEP 249 FAQ](https://www.python.org/dev/peps/pep-0249/#frequen
 * bullet 1: call `str.lower()` on the column name to be certain
 * bullet 2: all sql statements executed here are plain vanilla
 
-##Output
+###Output
 
 ```
 AreaMetadata : TableInfo(table_name=u'AreaMetadata', key_col_name='json_value', data='10 rows')
